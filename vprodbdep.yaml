@@ -17,6 +17,8 @@ spec:
       containers:
         - name: vprodb
           image: rafath25/coursejetweb:V1
+          args:
+            - "--ignore-db-dir=lost+found"
 
           volumeMounts:
             - mountPath: /var/lib/mysql
